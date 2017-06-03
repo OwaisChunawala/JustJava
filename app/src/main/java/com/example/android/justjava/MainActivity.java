@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void createOrderSummary(int price){
         String name="Name: Kaptain Kunal\n";
-        String whippedCreamString = "Add whipped cream? " + displayBool()+ "\n";
+        String whippedCreamString = "Add whipped cream? :" + displayBool()+ "\n";
         String quant = "Quantity: " + quantity + "\n";
         String priceMessage = "Total = $" + price + "\nThank You!\n" ;
         displayMessage(name + whippedCreamString+ quant+ priceMessage);

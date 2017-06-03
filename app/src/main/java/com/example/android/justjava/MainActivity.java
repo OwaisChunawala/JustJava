@@ -10,6 +10,7 @@ package com.example.android.justjava;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -60,9 +61,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void createOrderSummary(int price){
         String name="Name: Kaptain Kunal\n";
+        String whippedCreamString = "Add whipped cream? " + displayBool()+ "\n";
         String quant = "Quantity: " + quantity + "\n";
         String priceMessage = "Total = $" + price + "\nThank You!\n" ;
-        displayMessage(name + quant+ priceMessage);
+        displayMessage(name + whippedCreamString+ quant+ priceMessage);
 
     }
 
@@ -89,5 +91,13 @@ public class MainActivity extends AppCompatActivity {
     private void displayMessage(String message) {
         TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
         orderSummaryTextView.setText(message);
+    }
+    /**
+     * this code is for whipped cream checkbox
+     */
+    private boolean displayBool() {
+        CheckBox whippedCreamCB = (CheckBox) findViewById(R.id.WhippedCream_CB);
+        Boolean checkedState = whippedCreamCB.isChecked();
+        return checkedState;
     }
 }

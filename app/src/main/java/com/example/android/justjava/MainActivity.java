@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        //int quantity = 2;
         int price = calculatePrice();
         createOrderSummary(price);
     }
@@ -43,21 +42,27 @@ public class MainActivity extends AppCompatActivity {
      *  is the number of cups of coffee ordered
      */
     private int calculatePrice() {
-        return (quantity * 5);
+        int totalPrice=0;
+        totalPrice += quantity*5;
+        if(displayBoolWipCream()){
+            totalPrice += quantity*1;
+        }
+        if(displayBoolChoco()){
+            totalPrice +=quantity*2;
+        }
+        return totalPrice;
     }
 
     public void increment(View view) {
-        //int quantity = 2;
         quantity++;
         displayQuantity(quantity);
-        displayPrice(quantity * 5);
+        //displayPrice(quantity * 5);
     }
 
     public void decrement(View view) {
-        //int quantity = 2;
         quantity--;
         displayQuantity(quantity);
-        displayPrice(quantity * 5);
+        //displayPrice(quantity * 5);
 
     }
     public void createOrderSummary(int price){

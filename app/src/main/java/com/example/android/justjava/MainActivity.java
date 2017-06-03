@@ -61,10 +61,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void createOrderSummary(int price){
         String name="Name: Kaptain Kunal\n";
-        String whippedCreamString = "Add whipped cream? :" + displayBool()+ "\n";
+        String whippedCreamString = "Add whipped cream? :" + displayBoolWipCream()+ "\n";
+        String chocoString = "Add whipped cream? :" + displayBoolChoco()+ "\n";
         String quant = "Quantity: " + quantity + "\n";
         String priceMessage = "Total = $" + price + "\nThank You!\n" ;
-        displayMessage(name + whippedCreamString+ quant+ priceMessage);
+        displayMessage(name + whippedCreamString+ chocoString+ quant+ priceMessage);
 
     }
 
@@ -95,9 +96,14 @@ public class MainActivity extends AppCompatActivity {
     /**
      * this code is for whipped cream checkbox
      */
-    private boolean displayBool() {
+    private boolean displayBoolWipCream() {
         CheckBox whippedCreamCB = (CheckBox) findViewById(R.id.WhippedCream_CB);
         Boolean checkedState = whippedCreamCB.isChecked();
+        return checkedState;
+    }
+    private boolean displayBoolChoco() {
+        CheckBox ChocolateCB = (CheckBox) findViewById(R.id.Chocolate_CB);
+        Boolean checkedState = ChocolateCB.isChecked();
         return checkedState;
     }
 }

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         int totalPrice=0;
         totalPrice += quantity*5;
         if(displayBoolWipCream()){
-            totalPrice += quantity*1;
+            totalPrice += quantity;
         }
         if(displayBoolChoco()){
             totalPrice +=quantity*2;
@@ -120,13 +120,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private boolean displayBoolWipCream() {
         CheckBox whippedCreamCB = (CheckBox) findViewById(R.id.WhippedCream_CB);
-        Boolean checkedState = whippedCreamCB.isChecked();
-        return checkedState;
+        return whippedCreamCB.isChecked();
     }
     private boolean displayBoolChoco() {
         CheckBox ChocolateCB = (CheckBox) findViewById(R.id.Chocolate_CB);
-        Boolean checkedState = ChocolateCB.isChecked();
-        return checkedState;
+        return  ChocolateCB.isChecked();
     }
     private String displayName(){
         EditText name =  (EditText) findViewById(R.id.name_edit_text);

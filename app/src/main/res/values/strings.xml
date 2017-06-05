@@ -10,4 +10,8 @@
     <string name="zero">0</string>
     <string name="minus">-</string>
     <string name="order">Order</string>
+    <!--java file localization-->
+    <string name="hundred_cups">You cannot order more than 100 cups of coffees!</string>
+    <string name="zero_cups">You cannot order 0 cups of coffees!</string>
+
 </resources>

@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(quantity>= 100){
             Context context = getApplicationContext();
-            CharSequence text = "You cannot order more than 100 cups of coffees!";
+            CharSequence text = getString(R.string.hundred_cups);
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(quantity<= 100){
             Context context = getApplicationContext();
-            CharSequence text = "You cannot order 0 cups of coffees!";
+            CharSequence text = getString(R.string.zero_cups);
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);

@@ -1,10 +1,5 @@
 
-/**
- * IMPORTANT: Add your package below. Package name can be found in the project's AndroidManifest.xml file.
- * This is the package name our example uses:
- * <p>
- * package com.example.android.justjava;
- */
+
 package com.example.android.justjava;
 
 import android.content.Context;
@@ -38,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setType("*/*");
         intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(Intent.EXTRA_SUBJECT, "JustJava order for " + displayName());
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.submitOrder_subject, displayName()));
         intent.putExtra(Intent.EXTRA_TEXT, createOrderSummary(calculatePrice()));
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
@@ -96,11 +91,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public String createOrderSummary(int price){
-        String name="Your name is "+ displayName()+ "\n";
-        String whippedCreamString = "Add whipped cream? :" + displayBoolWipCream()+ "\n";
-        String chocoString = "Add whipped cream? :" + displayBoolChoco()+ "\n";
-        String quant = "Quantity: " + quantity + "\n";
-        String priceMessage = "Total = $" + price + "\nThank You!\n" ;
+        String name=getString(R.string.Order_summary_name, displayName())+ "\n";
+        String whippedCreamString = getString(R.string.add_whipped_cream)  + displayBoolWipCream()+ "\n";
+        String chocoString = getString(R.string.add_chocolate) + displayBoolChoco()+ "\n";
+        String quant = getString(R.string.summary_quantity) + quantity + "\n";
+        String priceMessage = getString(R.string.total) + price + "\n"+ getString(R.string.thank_you)+"\n" ;
         return name + whippedCreamString+ chocoString+ quant+ priceMessage;
 
     }

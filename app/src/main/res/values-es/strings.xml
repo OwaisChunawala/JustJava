@@ -12,11 +12,11 @@
     <string name="quantity">Cantidad</string>
     <string name="hundred_cups">¡No puedes pedir más de 100 tazas de cafés!</string>
     <string name="zero_cups">No se puede pedir 0 tazas de cafés!</string>
-    <string name="Order_summary_name">Su nombre es <xliff:g id="nombre" ejemplo="Amy">% s </xliff:g></string>
+    <string name="Order_summary_name">Su nombre es <xliff:g id="nombre" example="Amy">%s</xliff:g></string>
     <string name="add_whipped_cream">¿Agregar la crema batida? :</string>
     <string name="add_chocolate">¿Agregar chocolate? :</string>
     <string name="summary_quantity">Cantidad:</string>
     <string name="total">Total = $</string>
     <string name="thank_you">¡Gracias!</string>
-    <string name="submitOrder_subject">Aplicación JustJava para <xliff:g id="nombre" ejemplo="Amy">% s </xliff:g></string>
+    <string name="submitOrder_subject">Aplicación JustJava para <xliff:g id="nombre" example="Amy">%s</xliff:g></string>
 </resources>
